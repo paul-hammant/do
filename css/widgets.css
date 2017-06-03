@@ -20,7 +20,7 @@
   padding: 0 1rem; }
   @media only screen and (min-width: 624px) {
     .widgets__item {
-      width: 33.33%;
+      width: 40%;
       padding: 0 0.5rem;
       display: inline-block;
       float: none;
