@@ -11,18 +11,18 @@
   <link rel="stylesheet" href="/css/index.css">
   <link rel="stylesheet" href="/css/highlights/dracula.css">
   <link rel="canonical" href="http://devops.paulhammant.com/Airline-Case-Study/" />
-  <meta name="description" content="For ThoughtWorks, I was ‘Technical Principal’ for colleagues in Dallas, Chicago and Porto Allegre in Brazil. We were redoing the client’s website. Specifically building a replacement website in “insid">
+  <meta name="description" content="For ThoughtWorks, I was ‘Technical Principal’ for colleagues in Chicago, Dallas and Porto Allegre in Brazil. We were leading the client’s website. Specifically building a replacement website in “insid">
   <meta name="keywords" content="Trunk-Based Development,Application Strangulation,Concurrent Development of Consecutive Releases">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Airline Case Study">
   <meta property="og:url" content="http://devops.paulhammant.com/Airline-Case-Study/index.html">
   <meta property="og:site_name" content="Paul Hammant&#39;s DevOps">
-  <meta property="og:description" content="For ThoughtWorks, I was ‘Technical Principal’ for colleagues in Dallas, Chicago and Porto Allegre in Brazil. We were redoing the client’s website. Specifically building a replacement website in “insid">
+  <meta property="og:description" content="For ThoughtWorks, I was ‘Technical Principal’ for colleagues in Chicago, Dallas and Porto Allegre in Brazil. We were leading the client’s website. Specifically building a replacement website in “insid">
   <meta property="og:image" content="http://devops.paulhammant.com/images/default.jpg">
-  <meta property="og:updated_time" content="2017-06-04T01:37:47.000Z">
+  <meta property="og:updated_time" content="2017-06-04T10:11:02.000Z">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Airline Case Study">
-  <meta name="twitter:description" content="For ThoughtWorks, I was ‘Technical Principal’ for colleagues in Dallas, Chicago and Porto Allegre in Brazil. We were redoing the client’s website. Specifically building a replacement website in “insid">
+  <meta name="twitter:description" content="For ThoughtWorks, I was ‘Technical Principal’ for colleagues in Chicago, Dallas and Porto Allegre in Brazil. We were leading the client’s website. Specifically building a replacement website in “insid">
   <meta name="twitter:image" content="http://devops.paulhammant.com/images/default.jpg">
   <meta property="article:author" content="Paul Hammant">
   <link rel="icon" href="/phdo.png">
@@ -55,32 +55,39 @@
         </table>
         <hr>
         <div class="article__contents">
-          <p>For ThoughtWorks, I was ‘Technical Principal’ for colleagues in Dallas, Chicago and Porto Allegre in Brazil. We were redoing the client’s website. Specifically building a replacement website in “inside the box” choices of Java, SpringMVC and
+          <p>For ThoughtWorks, I was ‘Technical Principal’ for colleagues in Chicago, Dallas and Porto Allegre in Brazil. We were leading the client’s website. Specifically building a replacement website in “inside the box” choices of Java, SpringMVC and
             JSP.</p>
           <p>The complexity is that the client was doing “concurrent development of consecutive releases”. When I arrived on the project in 2009 the first ThoughtWorks-developed release was being finalized for a production push, and a sharing of load and
             responsibilities with the legacy Apache/CGI-BIN solution. The method to migrate from old to new was a ThoughtWorks classic: &quot;Application Strangulation&quot;<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup><sup>,</sup><sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>.</p>
-          <p>The challenge was to develop concurrently for releases that were spread out over year into the future, that involved two other consultancies, as well as the clients permanent staff, organized into separate teams. Given all of those releases
-            were of the same code, a single source repository was in play. The client was advised to have a “cascade” branching model, and I lobbied hard to the client and the leads from the other consultancies to move to Trunk-Based Development (TBD).
-            At a certain point the client acquiesced. A small amount of merging migrated the model from cascade to TBD, and all teams carried on with that, and associated practices “Feature Flags/Toggles” and “Branch by Abstraction” (on which I wrote
-            the first online article in 2007).</p>
-          <p>I rolled off the project after a couple of years. ThoughtWorks stayed, and a fellow that replaced me as Tech Principal ultimately got to prove the wisdom of the TBD choice in my absence, when the Airline had to re-sequence some major releases,
-            given a partner providing new services they intended to integrate with was going to be some months late. The consequence of that was to not release something that was imminently going out (and ready from the Airline’s viewpoint), go live with
-            a couple of other major releases, then go love with the delayed release. The flipping of some flags/toggles and some work with a new Jenkins pipeline to represent that unexpected permutation of toggles/flags proved that the re-sequencing did
-            not change any time lines or in itself jeopardize anything. The worst case scenario for such things with other branching models was many weeks of “unmerge” and other unsavory coding practices like commenting out code.</p>
-          <p>At Perforce’s MERGE conference in San Francisco in 2014, I made a keynote presentation which touched on this presentation. The Perforce page for that conference is down presently, so I recorded an updated version:</p>
+          <h2 id="changing-the-branching-model"><a class="header-anchor" href="#changing-the-branching-model">¶</a>Changing the branching model</h2>
+          <p>The challenge was to develop concurrently for releases that were spread out over years into the future, that involved two other consultancies, as well as the clients permanent staff, organized into separate teams. Given all of those releases
+            were of the same code, a single source repository was in play. The client was previously advised to have a “cascade” branching model, and I lobbied hard to the client and the leads from the other consultancies to move to Trunk-Based Development
+            (TBD). At a certain point the client acquiesced. A small amount of merging got us from cascade to TBD, and all teams carried on with that without delay. Associated practices “Feature Flags/Toggles” and “Branch by Abstraction” (on which I wrote
+            the first online article in 2007<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>) were taught to all involved, and expertly adhered to, as well as “Don’t break the build”.</p>
+          <h2 id="tbd-facilitating-a-hedge-bet"><a class="header-anchor" href="#tbd-facilitating-a-hedge-bet">¶</a>TBD facilitating a hedge bet</h2>
+          <p>I rolled off the project after a couple of years. ThoughtWorks stayed, and a fellow that replaced me as Tech Principal ultimately got to prove the wisdom of the TBD choice in my absence, when the airline had to re-sequence some major releases,
+            given a partner providing new services they intended to integrate with was going to be some months late. The consequence of that was to not release something that was imminently going out (and ready from the airline’s viewpoint), go live with
+            a couple of other major releases, then go love with the delayed release. The flipping of some flags/toggles and some work with a new Jenkins pipeline to represent that unanticipated permutation of toggles/flags proved that the re-sequencing
+            did not adversely change any time lines, or in itself jeopardize anything. The worst case scenario for such things with other branching models would have been many weeks of “unmerge” and other unsavory coding practices like commenting out
+            code. I don’t know for sure, but I’ll bet there were some new converts to the wisdom of Trunk-Based Development that day.</p>
+          <h3 id="presenting-at-merge-2014-on-tbd"><a class="header-anchor" href="#presenting-at-merge-2014-on-tbd">¶</a>Presenting at MERGE 2014 on TBD</h3>
+          <p>At Perforce’s MERGE conference in San Francisco in 2014, I did a keynote presentation which touched on this moment for the airline. The Perforce page for that conference is down presently, so I recorded an updated version:</p>
           <iframe width="853" height="480" src="https://www.youtube.com/embed/meB_SWzZm8M?rel=0" frameborder="0" allowfullscreen></iframe>
-          <p>(the Airline case study section is 6m 51s in)</p>
+          <p>(the airline case study section is 6m 51s in)</p>
+          <h2 id="selenium-cloud-and-bdd"><a class="header-anchor" href="#selenium-cloud-and-bdd">¶</a>Selenium cloud and BDD</h2>
+          <p>I also setup the airlines’s BDD tests that pulled in browsers from SauceLabs over VPN to allow for parallelized testing.</p>
           <div id="footnotes">
             <hr>
             <div id="footnotelist">
               <ol style="list-style:none; padding-left: 0;">
                 <li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;"><a href="https://www.martinfowler.com/bliki/StranglerApplication.html" target="_blank" rel="external">StranglerApplication</a> (Martin Fowler; 2004, 2014)</span>
-                  <a
-                    href="#fnref:1" rev="footnote"> ↩</a>
+                  <a href="#fnref:1" rev="footnote"> ↩</a>
                 </li>
                 <li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">2.</span><span style="display: inline-block; vertical-align: top;"><a href="https://paulhammant.com/2013/07/14/legacy-application-strangulation-case-studies/" target="_blank" rel="external">Legacy Application Strangulation : Case Studies</a> (Jul, 2013, my blog)</span>
-                  <a
-                    href="#fnref:2" rev="footnote"> ↩</a>
+                  <a href="#fnref:2" rev="footnote"> ↩</a>
+                </li>
+                <li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">3.</span><span style="display: inline-block; vertical-align: top;"><a href="https://paulhammant.com/blog/branch_by_abstraction.html" target="_blank" rel="external">Introducing Branch By Abstraction</a> (published Apr, 2007)</span>
+                  <a href="#fnref:3" rev="footnote"> ↩</a>
                 </li>
               </ol>
             </div>
@@ -98,8 +105,8 @@
         </div>
         <!-- Disqus Code-->
         <!-- Meta Tags for Structured Data-->
-        <meta itemprop="dateModified" content="2017-06-04T01:37:47.000Z">
-        <meta itemprop="articleBody" content="For ThoughtWorks, I was ‘Technical Principal’ for colleagues in Dallas, Chicago and Porto Allegre in Brazil. We were redoing the client’s website. Specifically building a replacement website in...">
+        <meta itemprop="dateModified" content="2017-06-04T10:11:02.000Z">
+        <meta itemprop="articleBody" content="For ThoughtWorks, I was ‘Technical Principal’ for colleagues in Chicago, Dallas and Porto Allegre in Brazil. We were leading the client’s website. Specifically building a replacement website in...">
         <meta itemprop="url" content="http://devops.paulhammant.com//Airline-Case-Study/">
         <meta itemprop="mainEntityOfPage" content="http://devops.paulhammant.com//Airline-Case-Study/">
         <div itemscope itemtype="https://schema.org/Organization" itemprop="publisher">
@@ -138,10 +145,10 @@
         <div class="widgets__item">
           <h3 class="widgets__item__heading">Recent posts</h3>
           <ul class="recent-posts">
-            <li class="recent-posts__item"><a href="/Build-Radiators-as-a-Service/">Build Radiators as a Service</a></li>
+            <li class="recent-posts__item"><a href="/BofA-Platform-Case-Study/">Bank of America FX Platform Case Study</a></li>
             <li class="recent-posts__item"><a href="/Airline-Case-Study/">Airline Case Study</a></li>
             <li class="recent-posts__item"><a href="/HedgeServ-Innovations/">HedgeServ innovations</a></li>
-            <li class="recent-posts__item"><a href="/BofA-Platform-Case-Study/">Bank of America FX Platform Case Study</a></li>
+            <li class="recent-posts__item"><a href="/Build-Radiators-as-a-Service/">Build Radiators as a Service</a></li>
           </ul>
         </div>
         <div class="widgets__item">
