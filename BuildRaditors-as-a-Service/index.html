@@ -1,24 +1,136 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>Build Radiators as a Service | Paul Hammant's DevOps</title><link rel="stylesheet" href="/libs/normalize.min.css"><link rel="stylesheet" href="/libs/font-awesome-4.6.3/css/font-awesome.min.css"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="/css/highlights/dracula.css"><link rel="canonical" href="http://devops.paulhammant.com/BuildRaditors-as-a-Service/"/>
-<meta name="description" content="After a number of assessments where one the recommendations was to “have a build radiator on a wall, and use the social engineering to get the build to consistently passing”, I realized that corporate">
-<meta name="keywords" content="Continuous Integration">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Build Radiators as a Service">
-<meta property="og:url" content="http://devops.paulhammant.com/BuildRaditors-as-a-Service/index.html">
-<meta property="og:site_name" content="Paul Hammant&#39;s DevOps">
-<meta property="og:description" content="After a number of assessments where one the recommendations was to “have a build radiator on a wall, and use the social engineering to get the build to consistently passing”, I realized that corporate">
-<meta property="og:image" content="https://cloud.githubusercontent.com/assets/82182/26152799/8c69e2f0-3ad6-11e7-8294-62196ebad748.png">
-<meta property="og:updated_time" content="2017-06-04T01:37:47.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Build Radiators as a Service">
-<meta name="twitter:description" content="After a number of assessments where one the recommendations was to “have a build radiator on a wall, and use the social engineering to get the build to consistently passing”, I realized that corporate">
-<meta name="twitter:image" content="https://cloud.githubusercontent.com/assets/82182/26152799/8c69e2f0-3ad6-11e7-8294-62196ebad748.png"><meta property="article:author" content="Paul Hammant"><link rel="icon" href="/phdo.png"><link rel="alternative" href="/atom.xml" type="application/atom+xml" title="Paul Hammant's DevOps"></head><body itemscope itemtype="https://schema.org/WebPage"><nav id="menu" class="menu"><div class="menu-inner"><div class="menu__left-area"><div class="menu__item"><a href="/" title="Home" rel="home" class="menu__item__link menu__item__link--brand"><img src="/phdo.png" alt="Paul Hammant's DevOps" class="menu__item__link--brand__image"><span class="menu__item__link--brand__label">Paul Hammant's DevOps</span></a></div></div><div class="menu__right-area"><div class="menu__item"><a href="/" class="menu__item__link">Home</a></div><div class="menu__item"><a href="/about" class="menu__item__link">About</a></div></div></div></nav><div class="page-background"></div><div class="content-outer"><div itemscope itemtype="https://schema.org/Blog" class="content-inner"><article id="article" itemscope itemtype="https://schema.org/BlogPosting" class="article"><table class="image-block"><tr><td><img src="/phdo.png" alt="PH.DO"></td><td><h1 itemprop="headline" class="article__title">Build Radiators as a Service</h1></td></tr></table><hr><div class="article__contents"><p>After a number of assessments where one the recommendations was to “have a build radiator on a wall, and use the social engineering to get the build to consistently passing”, I realized that corporates have a bunch of hurdles to overcome.</p>
-<ol>
-<li>Everything has to be logged in to the LAN as a real employee</li>
-<li>Screen savers for employees cannot be turned off</li>
-</ol>
-<p>So it occurred to me that mounting a TV in the guest WiFi without an associated user, with a browser on a public site a little bit of real security and a lot of security though obscurity, was a way ahead.</p>
-<p>This [<a href="http://BuildRadiator.org" target="_blank" rel="external">BuildRadiator.org</a>](<a href="https://buildradiator.org" target="_blank" rel="external">https://buildradiator.org</a>] was born:</p>
-<p><img src="https://cloud.githubusercontent.com/assets/82182/26152799/8c69e2f0-3ad6-11e7-8294-62196ebad748.png" alt="Radiator pic"></p>
-<p>People can make their own private radiator there, and start using it within seconds. Indeed, BuildRadiator (the project behind <a href="http://BuildRadiator.org" target="_blank" rel="external">BuildRadiator.org</a>) has its own build radiator on <a href="http://BuildRadiator.org" target="_blank" rel="external">BuildRadiator.org</a> <a href="https://buildradiator.org/r#b7n63m6hcb9sm2ttdn/Build_Radiator_DotOrg_Master" target="_blank" rel="external">here</a>, with CircleCI faithfully running builds and pushing build/step changes as they happen.</p>
-<p>From a DevOps point of view the project itself is mildly interesting. Java + Vue.js with <strong>a build time for compile, unit tests, integration tests, and Selenium tests of 35 seconds</strong>.</p>
-</div><div class="article__tags"><a href="/tags/Continuous-Integration/" class="article__tags__item">Continuous Integration</a></div><div id="sharer" class="sharer"><div class="sharer-inner"><div class="sharer__right"><button id="sharer-facebook" class="sharer__item"><i class="fa fa-facebook-official"></i></button><button id="sharer-twitter" class="sharer__item"><i class="fa fa-twitter"></i></button><button id="sharer-pinterest" class="sharer__item"><i class="fa fa-pinterest"></i></button><button id="sharer-pocket" class="sharer__item"><i class="fa fa-get-pocket"></i></button></div></div></div><!-- Disqus Code--><!-- Meta Tags for Structured Data--><meta itemprop="dateModified" content="2017-06-04T01:37:47.000Z"><meta itemprop="articleBody" content="After a number of assessments where one the recommendations was to “have a build radiator on a wall, and use the social engineering to get the build to consistently passing”, I realized that..."><meta itemprop="url" content="http://devops.paulhammant.com//BuildRaditors-as-a-Service/"><meta itemprop="mainEntityOfPage" content="http://devops.paulhammant.com//BuildRaditors-as-a-Service/"><div itemscope itemtype="https://schema.org/Organization" itemprop="publisher"><meta itemprop="name" content="Paul Hammant's DevOps"><div itemscope itemprop="logo" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="http://devops.paulhammant.com/phdo.png"></div></div><div itemscope itemtype="https://schema.org/ImageObject" itemprop="image"><meta itemprop="contentUrl" content="http://devops.paulhammant.com/images/default.jpg"><meta itemprop="url" content="http://devops.paulhammant.com/images/default.jpg"><meta itemprop="width" content="1280"><meta itemprop="height" content="720"></div></article></div></div><footer id="footer"><div class="widgets"><div class="widgets-inner"><!-- Jade doesn't support dynamic inclusion with `each`.--><!-- So, I just hard coded the file names that will be included.--><div class="widgets__item"><h3 class="widgets__item__heading">Recent posts</h3><ul class="recent-posts"><li class="recent-posts__item"><a href="/Airline-Case-Study/">Airline Case Study</a></li><li class="recent-posts__item"><a href="/HedgeServ-Innovations/">HedgeServ innovations</a></li><li class="recent-posts__item"><a href="/BofA-Platform-Case-Study/">Bank of America FX Platform Case Study</a></li><li class="recent-posts__item"><a href="/BuildRaditors-as-a-Service/">Build Radiators as a Service</a></li></ul></div><div class="widgets__item"><h3 class="widgets__item__heading">Tags</h3><ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Application-Strangulation/">Application Strangulation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Branch-by-Abstraction/">Branch by Abstraction</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Concurrent-Development-of-Consecutive-Releases/">Concurrent Development of Consecutive Releases</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Continuous-Delivery/">Continuous Delivery</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Continuous-Integration/">Continuous Integration</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Legacy-Rejuvenation/">Legacy Rejuvenation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Service-Virtualization/">Service Virtualization</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Speedy-Builds/">Speedy Builds</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Trunk-Based-Development/">Trunk-Based Development</a><span class="tag-list-count">3</span></li></ul></div></div></div><p class="copyright"><small>© 2017 Paul Hammant<br>Powered by <a href="https://hexo.io" rel="external" target="_blank">Hexo</a>, Theme by <a href="https://github.com/hyunseob" rel="external" target="_blank">HyunSeob</a></small></p></footer><script src="/js/sharer.min.js"></script></body></html>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Build Radiators as a Service | Paul Hammant's DevOps</title>
+  <link rel="stylesheet" href="/libs/normalize.min.css">
+  <link rel="stylesheet" href="/libs/font-awesome-4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/highlights/dracula.css">
+  <link rel="canonical" href="http://devops.paulhammant.com/BuildRaditors-as-a-Service/" />
+  <meta name="description" content="After a number of assessments where one the recommendations was to “have a build radiator on a wall, and use the social engineering to get the build to consistently passing”, I realized that corporate">
+  <meta name="keywords" content="Continuous Integration">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Build Radiators as a Service">
+  <meta property="og:url" content="http://devops.paulhammant.com/BuildRaditors-as-a-Service/index.html">
+  <meta property="og:site_name" content="Paul Hammant&#39;s DevOps">
+  <meta property="og:description" content="After a number of assessments where one the recommendations was to “have a build radiator on a wall, and use the social engineering to get the build to consistently passing”, I realized that corporate">
+  <meta property="og:image" content="https://cloud.githubusercontent.com/assets/82182/26152799/8c69e2f0-3ad6-11e7-8294-62196ebad748.png">
+  <meta property="og:updated_time" content="2017-06-04T01:37:47.000Z">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Build Radiators as a Service">
+  <meta name="twitter:description" content="After a number of assessments where one the recommendations was to “have a build radiator on a wall, and use the social engineering to get the build to consistently passing”, I realized that corporate">
+  <meta name="twitter:image" content="https://cloud.githubusercontent.com/assets/82182/26152799/8c69e2f0-3ad6-11e7-8294-62196ebad748.png">
+  <meta property="article:author" content="Paul Hammant">
+  <link rel="icon" href="/phdo.png">
+  <link rel="alternative" href="/atom.xml" type="application/atom+xml" title="Paul Hammant's DevOps">
+</head>
+
+<body itemscope itemtype="https://schema.org/WebPage">
+  <nav id="menu" class="menu">
+    <div class="menu-inner">
+      <div class="menu__left-area">
+        <div class="menu__item"><a href="/" title="Home" rel="home" class="menu__item__link menu__item__link--brand"><img src="/phdo.png" alt="Paul Hammant's DevOps" class="menu__item__link--brand__image"><span class="menu__item__link--brand__label">Paul Hammant's DevOps</span></a></div>
+      </div>
+      <div class="menu__right-area">
+        <div class="menu__item"><a href="/" class="menu__item__link">Home</a></div>
+        <div class="menu__item"><a href="/about" class="menu__item__link">About</a></div>
+      </div>
+    </div>
+  </nav>
+  <div class="page-background"></div>
+  <div class="content-outer">
+    <div itemscope itemtype="https://schema.org/Blog" class="content-inner">
+      <article id="article" itemscope itemtype="https://schema.org/BlogPosting" class="article">
+        <table class="image-block">
+          <tr>
+            <td><img src="/phdo.png" alt="PH.DO"></td>
+            <td>
+              <h1 itemprop="headline" class="article__title">Build Radiators as a Service</h1>
+            </td>
+          </tr>
+        </table>
+        <hr>
+        <div class="article__contents">
+          <p>After a number of assessments where one the recommendations was to “have a build radiator on a wall, and use the social engineering to get the build to consistently passing”, I realized that corporates have a bunch of hurdles to overcome.</p>
+          <ol>
+            <li>Everything has to be logged in to the LAN as a real employee</li>
+            <li>Screen savers for employees cannot be turned off</li>
+          </ol>
+          <p>So it occurred to me that mounting a TV in the guest WiFi without an associated user, with a browser on a public site a little bit of real security and a lot of security though obscurity, was a way ahead.</p>
+          <p>This [<a href="http://BuildRadiator.org" target="_blank" rel="external">BuildRadiator.org</a>](<a href="https://buildradiator.org" target="_blank" rel="external">https://buildradiator.org</a>] was born:</p>
+          <p><img src="https://cloud.githubusercontent.com/assets/82182/26152799/8c69e2f0-3ad6-11e7-8294-62196ebad748.png" alt="Radiator pic"></p>
+          <p>People can make their own private radiator there, and start using it within seconds. Indeed, BuildRadiator (the project behind <a href="http://BuildRadiator.org" target="_blank" rel="external">BuildRadiator.org</a>) has its own build radiator
+            on <a href="http://BuildRadiator.org" target="_blank" rel="external">BuildRadiator.org</a> <a href="https://buildradiator.org/r#b7n63m6hcb9sm2ttdn/Build_Radiator_DotOrg_Master" target="_blank" rel="external">here</a>, with CircleCI faithfully
+            running builds and pushing build/step changes as they happen.</p>
+          <p>From a DevOps point of view the project itself is mildly interesting. Java + Vue.js with <strong>a build time for compile, unit tests, integration tests, and Selenium tests of 35 seconds</strong>.</p>
+        </div>
+        <div class="article__tags"><a href="/tags/Continuous-Integration/" class="article__tags__item">Continuous Integration</a></div>
+        <div id="sharer" class="sharer">
+          <div class="sharer-inner">
+            <div class="sharer__right"><button id="sharer-facebook" class="sharer__item"><i class="fa fa-facebook-official"></i></button><button id="sharer-twitter" class="sharer__item"><i class="fa fa-twitter"></i></button><button id="sharer-pinterest" class="sharer__item"><i class="fa fa-pinterest"></i></button>
+              <button
+                id="sharer-pocket" class="sharer__item"><i class="fa fa-get-pocket"></i></button>
+            </div>
+          </div>
+        </div>
+        <!-- Disqus Code-->
+        <!-- Meta Tags for Structured Data-->
+        <meta itemprop="dateModified" content="2017-06-04T01:37:47.000Z">
+        <meta itemprop="articleBody" content="After a number of assessments where one the recommendations was to “have a build radiator on a wall, and use the social engineering to get the build to consistently passing”, I realized that...">
+        <meta itemprop="url" content="http://devops.paulhammant.com//BuildRaditors-as-a-Service/">
+        <meta itemprop="mainEntityOfPage" content="http://devops.paulhammant.com//BuildRaditors-as-a-Service/">
+        <div itemscope itemtype="https://schema.org/Organization" itemprop="publisher">
+          <meta itemprop="name" content="Paul Hammant's DevOps">
+          <div itemscope itemprop="logo" itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url" content="http://devops.paulhammant.com/phdo.png">
+          </div>
+        </div>
+        <div itemscope itemtype="https://schema.org/ImageObject" itemprop="image">
+          <meta itemprop="contentUrl" content="http://devops.paulhammant.com/images/default.jpg">
+          <meta itemprop="url" content="http://devops.paulhammant.com/images/default.jpg">
+          <meta itemprop="width" content="1280">
+          <meta itemprop="height" content="720">
+        </div>
+      </article>
+    </div>
+  </div>
+  <footer id="footer">
+    <div class="widgets">
+      <div class="widgets-inner">
+        <!-- Jade doesn't support dynamic inclusion with `each`.-->
+        <!-- So, I just hard coded the file names that will be included.-->
+        <div class="widgets__item">
+          <h3 class="widgets__item__heading">Recent posts</h3>
+          <ul class="recent-posts">
+            <li class="recent-posts__item"><a href="/Airline-Case-Study/">Airline Case Study</a></li>
+            <li class="recent-posts__item"><a href="/HedgeServ-Innovations/">HedgeServ innovations</a></li>
+            <li class="recent-posts__item"><a href="/BofA-Platform-Case-Study/">Bank of America FX Platform Case Study</a></li>
+            <li class="recent-posts__item"><a href="/BuildRaditors-as-a-Service/">Build Radiators as a Service</a></li>
+          </ul>
+        </div>
+        <div class="widgets__item">
+          <h3 class="widgets__item__heading">Tags</h3>
+          <ul class="tag-list">
+            <li class="tag-list-item"><a class="tag-list-link" href="/tags/Application-Strangulation/">Application Strangulation</a><span class="tag-list-count">1</span></li>
+            <li class="tag-list-item"><a class="tag-list-link" href="/tags/Branch-by-Abstraction/">Branch by Abstraction</a><span class="tag-list-count">1</span></li>
+            <li class="tag-list-item"><a class="tag-list-link" href="/tags/Concurrent-Development-of-Consecutive-Releases/">Concurrent Development of Consecutive Releases</a><span class="tag-list-count">1</span></li>
+            <li class="tag-list-item"><a class="tag-list-link" href="/tags/Continuous-Delivery/">Continuous Delivery</a><span class="tag-list-count">1</span></li>
+            <li class="tag-list-item"><a class="tag-list-link" href="/tags/Continuous-Integration/">Continuous Integration</a><span class="tag-list-count">1</span></li>
+            <li class="tag-list-item"><a class="tag-list-link" href="/tags/Legacy-Rejuvenation/">Legacy Rejuvenation</a><span class="tag-list-count">1</span></li>
+            <li class="tag-list-item"><a class="tag-list-link" href="/tags/Service-Virtualization/">Service Virtualization</a><span class="tag-list-count">1</span></li>
+            <li class="tag-list-item"><a class="tag-list-link" href="/tags/Speedy-Builds/">Speedy Builds</a><span class="tag-list-count">1</span></li>
+            <li class="tag-list-item"><a class="tag-list-link" href="/tags/Trunk-Based-Development/">Trunk-Based Development</a><span class="tag-list-count">3</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="copyright"><small>© 2017 Paul Hammant<br>Powered by <a href="https://hexo.io" rel="external" target="_blank">Hexo</a>, Theme by <a href="https://github.com/hyunseob" rel="external" target="_blank">HyunSeob</a></small></p>
+  </footer>
+  <script src="/js/sharer.min.js"></script>
+</body>
+
+</html>
