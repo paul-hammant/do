@@ -18,7 +18,7 @@
   <meta property="og:site_name" content="Paul Hammant&#39;s DevOps">
   <meta property="og:description" content="As a ThoughtWorks consultant I was sent to clients to assess the way they developed software and present the findings back to them. Sometimes I did this solo, and sometimes as a team. My focus was alw">
   <meta property="og:image" content="http://paulhammant.com/images/basic_tbd.png">
-  <meta property="og:updated_time" content="2017-06-10T11:14:28.000Z">
+  <meta property="og:updated_time" content="2017-06-12T09:22:16.000Z">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="About me">
   <meta name="twitter:description" content="As a ThoughtWorks consultant I was sent to clients to assess the way they developed software and present the findings back to them. Sometimes I did this solo, and sometimes as a team. My focus was alw">
@@ -102,14 +102,18 @@
             <sup class="footnote-ref"><a href="#fn8" id="fnref8">[8]</a></sup>, and updated and made into a PDF in 2013<sup class="footnote-ref"><a href="#fn9" id="fnref9">[9]</a></sup>. Actual animations from the BofA recommendation deck were redone
             in JavaScript and SVG for a blog entry on “tweening” in 2016 for fun<sup class="footnote-ref"><a href="#fn10" id="fnref10">[10]</a></sup>.</p>
           <h3 id="test-impact-analysis-towards-running-less-tests"><a class="header-anchor" href="#test-impact-analysis-towards-running-less-tests">¶</a>Test Impact Analysis towards running less tests</h3>
-          <p>If you have 1000 tests taking 10 seconds each, or 10000 tests taking 1 second each, that is 2.7 hours to execute them all. Microsoft is now talking about the same ideas too <sup class="footnote-ref"><a href="#fn11" id="fnref11">[11]</a></sup><sup>m</sup>
-            <sup class="footnote-ref"><a href="#fn12" id="fnref12">[12]</a></sup>.</p>
+          <p>If you have 1000 tests taking 10 seconds each, or 10000 tests taking 1 second each, that is 2.7 hours to execute them all. At HedgeServ, I introduced a mechanism to determine which tests are provably impacted for a given commit, and how shorten
+            the duration of tests because of that. It relies on code-coverage being pre-calculated on a per test basis, and from that a map of code vs tests that can be used to speedily perform the test reduction. I blogged on this providing Java
+            <sup
+              class="footnote-ref"><a href="#fn11" id="fnref11">[11]</a></sup> and Python<sup class="footnote-ref"><a href="#fn12" id="fnref12">[12]</a></sup> proofs of concept. Microsoft is also talking about the same ideas <sup class="footnote-ref"><a href="#fn13" id="fnref13">[13]</a></sup><sup>m</sup>
+              <sup
+                class="footnote-ref"><a href="#fn14" id="fnref14">[14]</a></sup>.</p>
           <h3 id="configuration-as-code"><a class="header-anchor" href="#configuration-as-code">¶</a>Configuration as Code</h3>
           <p>TODO</p>
           <h3 id="client-side-mvc"><a class="header-anchor" href="#client-side-mvc">¶</a>Client Side MVC</h3>
-          <p>Because of a friendship with the authors of Angular, I was able to prepare and push a blog entry<sup class="footnote-ref"><a href="#fn13" id="fnref13">[13]</a></sup> on it the same day as Miško Hevery announced the tech for the first time on
+          <p>Because of a friendship with the authors of Angular, I was able to prepare and push a blog entry<sup class="footnote-ref"><a href="#fn15" id="fnref15">[15]</a></sup> on it the same day as Miško Hevery announced the tech for the first time on
             his blog
-            <sup class="footnote-ref"><a href="#fn14" id="fnref14">[14]</a></sup> in 2009. Ever since I have been a huge fan of its terse &amp; expressive style, and the stroke of genius that extending HTML was. I’ve written 29 blog entries on “Client
+            <sup class="footnote-ref"><a href="#fn16" id="fnref16">[16]</a></sup> in 2009. Ever since I have been a huge fan of its terse &amp; expressive style, and the stroke of genius that extending HTML was. I’ve written 29 blog entries on “Client
             Side MVC” since then, all focused on the potential for development cost reductions that this class of technology heralds (if done right). As an application technology choice, there’s definitely a DevOps benefit.</p>
           <hr class="footnotes-sep">
           <section class="footnotes">
@@ -146,16 +150,23 @@
                 <p><a href="https://paulhammant.com/2016/07/25/java-legacy-hairball-refactoring-case-study/" target="_blank" rel="external">Java legacy hairball: refactoring case-study</a> (Jul, 2016, my blog) <a href="#fnref10" class="footnote-backref">↩</a></p>
               </li>
               <li id="fn11" class="footnote-item">
-                <p><a href="https://blogs.msdn.microsoft.com/visualstudioalm/2017/03/02/accelerated-continuous-testing-with-test-impact-analysis-part-1/" target="_blank" rel="external">Accelerated Continuous Testing with Test Impact Analysis – Part 1</a>                  (Mar, 2017) <a href="#fnref11" class="footnote-backref">↩</a></p>
+                <p><a href="https://paulhammant.com/2015/01/11/reducing-test-times-by-only-running-impacted-tests/" target="_blank" rel="external">Reducing Test Times by Only Running Impacted Tests</a> (Jan, 2015, my blog) <a href="#fnref11" class="footnote-backref">↩</a></p>
               </li>
               <li id="fn12" class="footnote-item">
-                <p><a href="https://blogs.msdn.microsoft.com/visualstudioalm/2017/05/16/accelerated-continuous-testing-with-test-impact-analysis-part-2/" target="_blank" rel="external">Accelerated Continuous Testing with Test Impact Analysis – Part 2</a>                  (May, 2017) <a href="#fnref12" class="footnote-backref">↩</a></p>
+                <p><a href="https://paulhammant.com/2015/01/18/reducing-test-times-by-only-running-impacted-tests-python-edition/" target="_blank" rel="external">Reducing Test Times by Only Running Impacted Tests - Python Edition</a> (Jan, 2015,my blog)
+                  <a href="#fnref12" class="footnote-backref">↩</a></p>
               </li>
               <li id="fn13" class="footnote-item">
-                <p><a href="https://paulhammant.com/blog/angular-declarative-ui.html" target="_blank" rel="external">Angular - HTML based Declarative UI (also one to watch)</a> (published Sep, 2009) <a href="#fnref13" class="footnote-backref">↩</a></p>
+                <p><a href="https://blogs.msdn.microsoft.com/visualstudioalm/2017/03/02/accelerated-continuous-testing-with-test-impact-analysis-part-1/" target="_blank" rel="external">Accelerated Continuous Testing with Test Impact Analysis – Part 1</a>                  (Mar, 2017) <a href="#fnref13" class="footnote-backref">↩</a></p>
               </li>
               <li id="fn14" class="footnote-item">
-                <p><a href="http://misko.hevery.com/2009/09/28/hello-world-angular-is-here/" target="_blank" rel="external">Hello World, &lt;angular/&gt; is here</a> (published Sep, 2009) <a href="#fnref14" class="footnote-backref">↩</a></p>
+                <p><a href="https://blogs.msdn.microsoft.com/visualstudioalm/2017/05/16/accelerated-continuous-testing-with-test-impact-analysis-part-2/" target="_blank" rel="external">Accelerated Continuous Testing with Test Impact Analysis – Part 2</a>                  (May, 2017) <a href="#fnref14" class="footnote-backref">↩</a></p>
+              </li>
+              <li id="fn15" class="footnote-item">
+                <p><a href="https://paulhammant.com/blog/angular-declarative-ui.html" target="_blank" rel="external">Angular - HTML based Declarative UI (also one to watch)</a> (published Sep, 2009) <a href="#fnref15" class="footnote-backref">↩</a></p>
+              </li>
+              <li id="fn16" class="footnote-item">
+                <p><a href="http://misko.hevery.com/2009/09/28/hello-world-angular-is-here/" target="_blank" rel="external">Hello World, &lt;angular/&gt; is here</a> (published Sep, 2009) <a href="#fnref16" class="footnote-backref">↩</a></p>
               </li>
             </ol>
           </section>
@@ -170,7 +181,7 @@
         </div>
         <!-- Disqus Code-->
         <!-- Meta Tags for Structured Data-->
-        <meta itemprop="dateModified" content="2017-06-10T11:14:28.000Z">
+        <meta itemprop="dateModified" content="2017-06-12T09:22:16.000Z">
         <meta itemprop="articleBody" content="As a ThoughtWorks consultant I was sent to clients to assess the way they developed software and present the findings back to them. Sometimes I did this solo, and sometimes as a team. My focus was...">
         <meta itemprop="url" content="http://devops.paulhammant.com//about.html">
         <meta itemprop="mainEntityOfPage" content="http://devops.paulhammant.com//about.html">
