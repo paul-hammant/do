@@ -11,7 +11,8 @@
     }
   }
 
-  var prevPos = 0, currPos = 0;
+  var prevPos = 0,
+    currPos = 0;
   var menu = document.getElementById('menu');
   var sharer = document.getElementById('sharer');
   var article = document.getElementById('article');

@@ -1,10 +1,10 @@
 (function(window, document) {
 
   var shareUrls = {
-    facebook:  '//www.facebook.com/sharer.php?u=',
-    twitter:   '//twitter.com/intent/tweet?url=',
+    facebook: '//www.facebook.com/sharer.php?u=',
+    twitter: '//twitter.com/intent/tweet?url=',
     pinterest: '//pinterest.com/pin/create/button/?url=',
-    pocket:    '//getpocket.com/save?url='
+    pocket: '//getpocket.com/save?url='
   };
   var sharers = Object.keys(shareUrls);
 

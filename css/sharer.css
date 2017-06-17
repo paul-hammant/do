@@ -9,22 +9,26 @@
   border-top: 1px solid #EDEDED;
   -webkit-transition: -webkit-transform 0.3s ease;
   -moz-transition: -moz-transform 0.3s ease;
-  transition: transform 0.3s ease; }
+  transition: transform 0.3s ease;
+}
 
 .sharer--hide {
   -webkit-transform: translateY(3rem);
   -moz-transform: translateY(3rem);
   -ms-transform: translateY(3rem);
   -o-transform: translateY(3rem);
-  transform: translateY(3rem); }
+  transform: translateY(3rem);
+}
 
 .sharer-inner {
   padding: 0 1rem;
   max-width: 45rem;
-  margin: auto; }
+  margin: auto;
+}
 
 .sharer__right {
-  float: right; }
+  float: right;
+}
 
 .sharer__item {
   background: none;
@@ -37,16 +41,21 @@
   cursor: pointer;
   -webkit-transition: color 0.3s ease;
   -moz-transition: color 0.3s ease;
-  transition: color 0.3s ease; }
+  transition: color 0.3s ease;
+}
 
 #sharer-facebook:hover {
-  color: #3B5998; }
+  color: #3B5998;
+}
 
 #sharer-twitter:hover {
-  color: #00ACED; }
+  color: #00ACED;
+}
 
 #sharer-pinterest:hover {
-  color: #B5071A; }
+  color: #B5071A;
+}
 
 #sharer-pocket:hover {
-  color: #EF4056; }
+  color: #EF4056;
+}
