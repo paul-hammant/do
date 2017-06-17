@@ -19,7 +19,7 @@
   <meta property="og:site_name" content="Paul Hammant&#39;s DevOps">
   <meta property="og:description" content="In 2014 I left ThoughtWorks and joined HedgeServ, a leading hedge fund administrator, in Manhattan. I started as Senior Director of Engineering, overseeing 68 highly-skilled developers and QAs and lef">
   <meta property="og:image" content="http://devops.paulhammant.com/images/default.jpg">
-  <meta property="og:updated_time" content="2017-06-12T09:25:48.000Z">
+  <meta property="og:updated_time" content="2017-06-17T09:50:35.000Z">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="HedgeServ innovations">
   <meta name="twitter:description" content="In 2014 I left ThoughtWorks and joined HedgeServ, a leading hedge fund administrator, in Manhattan. I started as Senior Director of Engineering, overseeing 68 highly-skilled developers and QAs and lef">
@@ -55,25 +55,25 @@
         </table>
         <hr>
         <div class="article__contents">
-          <p>In 2014 I left ThoughtWorks and joined HedgeServ, a leading hedge fund administrator, in Manhattan. I started as Senior Director of Engineering, overseeing 68 highly-skilled developers and QAs and left as Chief Science Officer at the end of
-            2016. I enjoyed my time at HedgeServ, and would highly recommend it for someone wanting to get into Fin-Tech, and experience the pressure for increased release cadence and the problem solving to get there.</p>
-          <p>I was very pleased to find when I arrived that HedgeServ was already doing Trunk Based Development, and only required a small tweak to their workflow.</p>
+          <p>In 2014 I left ThoughtWorks and joined HedgeServ, a leading hedge fund administrator, in Manhattan. I started as Senior<br> Director of Engineering, overseeing 68 highly-skilled developers and QAs and left as Chief Science Officer at the end<br>            of 2016. I enjoyed my time at HedgeServ, and would highly recommend it for someone wanting to get into Fin-Tech, and<br> experience the pressure for increased release cadence and the problem solving to get there.</p>
+          <p>I was very pleased to find when I arrived that HedgeServ was already doing Trunk Based Development, and only required<br> a small tweak to their workflow.</p>
           <h2 id="new-applications"><a class="header-anchor" href="#new-applications">¶</a>New applications</h2>
-          <p>My achievements include the spinning up of four projects (3 applications, 1 service), with fast builds that followed the ‘test pyramid’ closely with a suite of Selenium tests close out the build (for the 3 UI ones). Three of the four new apps
-            used Service Virtualization (SV) in the build in order be speedy.</p>
-          <p>In one particular case <strong>the build time for compile, unit tests, integration tests, and Selenium tests was 30 seconds</strong>, and each commit would reach UAT, using Chef scripts to handle the deployment. Business leadership was appreciative
-            of the faster cycle times. The solution was Java and AngularJS, and the fire-hose into UAT could be adjusted to allow an audit-approved sign-off sequence before go-live, that used Chef scripts to verify the approvals.</p>
+          <p>My achievements include the spinning up of four projects (3 applications, 1 service), with fast builds that followed<br> the ‘test pyramid’ closely with a suite of Selenium tests close out the build (for the 3 UI ones). Three of the four<br>            new apps used Service Virtualization (SV) in the build in order be speedy.</p>
+          <p>In one particular case <strong>the build time for compile, unit tests, integration tests, and Selenium tests was 30 seconds</strong>,<br> and each commit would reach UAT, using Chef scripts to handle the deployment. Business leadership was appreciative
+            of
+            <br> the faster cycle times. The solution was Java and AngularJS, and the fire-hose into UAT could be adjusted to allow an<br> audit-approved sign-off sequence before go-live, that used Chef scripts to verify the approvals.</p>
           <h2 id="devops-pieces"><a class="header-anchor" href="#devops-pieces">¶</a>DevOps pieces</h2>
           <h3 id="monolith-split-into-micro-applications"><a class="header-anchor" href="#monolith-split-into-micro-applications">¶</a>Monolith split into Micro applications.</h3>
-          <p>I also reworked the web-tier’s codebase to have separations between the different web applications so that they could fit a Google style of site composition<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> (including authentication).
-            The different apps had to agree on URLs, cookies, redirects in order to be stitched together into a single site experience by the load balancer, and be allowed to have separate release cadences.</p>
+          <p>I also reworked the web tier’s codebase to have separations between the different web applications so that they could<br> fit a Google style of site composition<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> (including authentication).
+            The different apps had to agree on URLs,<br> cookies, redirects in order to be stitched together into a single site experience by the load balancer, and be allowed<br> to have separate release cadences.</p>
           <h3 id="test-execution-reduction-via-impact-mapping"><a class="header-anchor" href="#test-execution-reduction-via-impact-mapping">¶</a>Test execution reduction via impact mapping</h3>
-          <p>I pioneered techniques to advance calculate the impacted tests for a commit, and only run those, as a quicker proof of correctness. I went as far as to provide the proofs of concept in Java<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>            and Python<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup>, and it is been productionized since I left. This is a general purpose solution: In a perpetually running CI daemon is running one test at a time, and working out
-            what prod code was covered, then reversing it to store that in a map, which itself is stored for posterity (a commit). Later, with a given change set (one or more commits) in regular CI, only impacted tests are run, for a greatly shortened
-            test suite run. Microsoft is doing some impacted test reduction their ALM features of Visual Studio<sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup><sup>,</sup><sup class="footnote-ref"><a href="#fn5" id="fnref5">[5]</a></sup>,
+          <p>I pioneered techniques to advance calculate the impacted tests for a commit and only run those, as a quicker proof<br> of correctness. I went as far as to provide the proofs of concept in Java<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>            and Python<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup>, and it is been<br> productionized since I left. This is a general purpose solution: In a perpetually running CI daemon is running one<br> test at a time, and working
+            out what prod code was covered, then reversing it to store it in a map, which itself<br> is represented in text and committed. Later, with a given change set (one or more commits) in regular CI, only impacted<br> tests are run, for a greatly
+            shortened test suite run. Microsoft is doing some impacted test reduction their ALM<br> features of Visual Studio<sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup><sup>,</sup><sup class="footnote-ref"><a href="#fn5" id="fnref5">[5]</a></sup>,
             but it is unclear whether it is to do with code-coverage mappings.</p>
-          <h3 id="new-config-as-code-system"><a class="header-anchor" href="#new-config-as-code-system">¶</a>New Config as Code system</h3>
-          <p>Lastly I invented a system to store client configuration in source-control allowing UI editing and publishing through the multiple affected server nodes when changed. I’m not sure of the status of that since leaving.</p>
+          <!-- ### New Config as Code system -->
+          <!-- Lastly, I invented a system to store client configuration in source-control allowing UI editing and publishing through
+the multiple affected server nodes when changed. I'm not sure of the status of that since leaving. -->
           <hr class="footnotes-sep">
           <section class="footnotes">
             <ol class="footnotes-list">
@@ -113,7 +113,7 @@
         </div>
         <!-- Disqus Code-->
         <!-- Meta Tags for Structured Data-->
-        <meta itemprop="dateModified" content="2017-06-12T09:25:48.000Z">
+        <meta itemprop="dateModified" content="2017-06-17T09:50:35.000Z">
         <meta itemprop="articleBody" content="In 2014 I left ThoughtWorks and joined HedgeServ, a leading hedge fund administrator, in Manhattan. I started as Senior Director of Engineering, overseeing 68 highly-skilled developers and QAs and...">
         <meta itemprop="url" content="http://devops.paulhammant.com//HedgeServ-Innovations/">
         <meta itemprop="mainEntityOfPage" content="http://devops.paulhammant.com//HedgeServ-Innovations/">
@@ -153,10 +153,10 @@
         <div class="widgets__item">
           <h3 class="widgets__item__heading">Recent posts</h3>
           <ul class="recent-posts">
-            <li class="recent-posts__item"><a href="/HedgeServ-Innovations/">HedgeServ innovations</a></li>
-            <li class="recent-posts__item"><a href="/Build-Radiators-as-a-Service/">Build Radiators as a Service</a></li>
-            <li class="recent-posts__item"><a href="/BofA-Platform-Case-Study/">Bank of America FX Platform Case Study</a></li>
             <li class="recent-posts__item"><a href="/Airline-Case-Study/">Airline Case Study</a></li>
+            <li class="recent-posts__item"><a href="/BofA-Platform-Case-Study/">Bank of America FX Platform Case Study</a></li>
+            <li class="recent-posts__item"><a href="/Build-Radiators-as-a-Service/">Build Radiators as a Service</a></li>
+            <li class="recent-posts__item"><a href="/HedgeServ-Innovations/">HedgeServ innovations</a></li>
           </ul>
         </div>
         <div class="widgets__item">

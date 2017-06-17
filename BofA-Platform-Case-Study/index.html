@@ -19,7 +19,7 @@
   <meta property="og:site_name" content="Paul Hammant&#39;s DevOps">
   <meta property="og:description" content="In 2005 I assessed Bank of America’s FX platform in Chicago, and presented back to the leadership on their challenges and left them with recommendations. I went on to lead a development technology-foc">
   <meta property="og:image" content="http://devops.paulhammant.com/images/default.jpg">
-  <meta property="og:updated_time" content="2017-06-04T10:29:10.000Z">
+  <meta property="og:updated_time" content="2017-06-17T10:00:29.000Z">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Bank of America FX Platform Case Study">
   <meta name="twitter:description" content="In 2005 I assessed Bank of America’s FX platform in Chicago, and presented back to the leadership on their challenges and left them with recommendations. I went on to lead a development technology-foc">
@@ -55,7 +55,7 @@
         </table>
         <hr>
         <div class="article__contents">
-          <p>In 2005 I assessed Bank of America’s FX platform in Chicago, and presented back to the leadership on their challenges and left them with recommendations. I went on to lead a development technology-focused mission for them.</p>
+          <p>In 2005 I assessed Bank of America’s FX platform in Chicago, and presented back to the leadership on their challenges and<br> left them with recommendations. I went on to lead a development technology-focused mission for them.</p>
           <p>In one choreographed effort, I organized, and trained the staff in:</p>
           <ol>
             <li>A move from ClearCase (multiple active branches) to Perforce (trunk based development &amp; monorepo)</li>
@@ -65,36 +65,33 @@
             <li>Tactically adding tests as work progressed</li>
             <li>Hooking everything up with a CI daemon (CruiseControl).</li>
           </ol>
-          <p>Items #1 to #5 the above were performed in parallel. At any one time we were part complete on all of the those, and each would leap forward a percentage as emphasis shifted to it tactically towards the larger completion.</p>
+          <p>Items #1 to #5 the above were performed in parallel. At any one time we were part complete on all of the those, and each<br> would leap forward a percentage as emphasis shifted to it tactically towards the larger completion.</p>
           <p>And when #4 was complete,</p>
-          <p>   7. Service Locator to Dependency Injection, according to a methodical ‘Least depending, most depended on first’ approach.</p>
-          <p>ThoughtWorks rolled off the account before the mission was complete, but I was invited back a year later to check progress. A day trip to Chicago from San Francisco!</p>
+          <p>   7. Service Locator to Dependency Injection, according to a methodical ‘Least depending, most depended<br> on first’ approach.</p>
+          <p>ThoughtWorks rolled off the account before the mission was complete, but I was invited back a year later to check<br> progress. A day trip to Chicago from San Francisco!</p>
           <h2 id="branch-by-abstraction"><a class="header-anchor" href="#branch-by-abstraction">¶</a>Branch by Abstraction</h2>
           <p>One of the major contributions I’ve made to the DevOps field is this procedure, and it cme ouf ot the BofA mission.</p>
           <h2 id="legacy-refactoring-least-depending-most-depended-on-first"><a class="header-anchor" href="#legacy-refactoring-least-depending-most-depended-on-first">¶</a>Legacy Refactoring: Least depending, most depended on first</h2>
-          <p>This approach to a large refactoring agenda came out of this mission. I first documented it for InfoQ in 2008<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>. It was referenced in a follow up “refactoring experiment” article
-            <sup
-              id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>, and updated and made into a PDF in 2013<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>. Actual animations from the BofA recommendation deck were redone in JavaScript and SVG for a blog
-              entry on “tweening” in 2016 for fun<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup>.</p>
-          <div id="footnotes">
-            <hr>
-            <div id="footnotelist">
-              <ol style="list-style:none; padding-left: 0;">
-                <li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;"><a href="https://www.infoq.com/articles/drinking-your-guice-too-quickly" target="_blank" rel="external">Drinking your Guice too quickly?</a> (Apr, 2008, InfoQ)</span>
-                  <a href="#fnref:1" rev="footnote"> ↩</a>
-                </li>
-                <li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">2.</span><span style="display: inline-block; vertical-align: top;"><a href="https://paulhammant.com/2011/09/01/refactoring-experiment/" target="_blank" rel="external">Refactoring Experiment - 'least depending and most depended on' components first</a> (Sep, 2011, my blog)</span>
-                  <a href="#fnref:2" rev="footnote"> ↩</a>
-                </li>
-                <li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">3.</span><span style="display: inline-block; vertical-align: top;"><a href="https://paulhammant.com/2013/03/20/singleton-escape-plan/" target="_blank" rel="external">A Singleton Escape Plan</a> (Mar, 2013, PDF on my blog)</span>
-                  <a href="#fnref:3" rev="footnote"> ↩</a>
-                </li>
-                <li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">4.</span><span style="display: inline-block; vertical-align: top;"><a href="https://paulhammant.com/2016/07/25/java-legacy-hairball-refactoring-case-study/" target="_blank" rel="external">Java legacy hairball: refactoring case-study</a> (Jul, 2016, my blog)</span>
-                  <a href="#fnref:4" rev="footnote"> ↩</a>
-                </li>
-              </ol>
-            </div>
-          </div>
+          <p>This approach to a large refactoring agenda came out of this mission. I first documented it for InfoQ in 2008<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>. It<br> was referenced in a follow up “refactoring experiment” article
+            <sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>, and updated and made into a PDF in 2013<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup>.<br> Actual animations from the BofA recommendation deck were redone
+            in JavaScript and SVG for a blog entry on &quot;tweening&quot;<br> in 2016 for fun<sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup>.</p>
+          <hr class="footnotes-sep">
+          <section class="footnotes">
+            <ol class="footnotes-list">
+              <li id="fn1" class="footnote-item">
+                <p><a href="https://www.infoq.com/articles/drinking-your-guice-too-quickly" target="_blank" rel="external">Drinking your Guice too quickly?</a> (Apr, 2008, InfoQ) <a href="#fnref1" class="footnote-backref">↩</a></p>
+              </li>
+              <li id="fn2" class="footnote-item">
+                <p><a href="https://paulhammant.com/2011/09/01/refactoring-experiment/" target="_blank" rel="external">Refactoring Experiment - ‘least depending and most depended on’ components first</a> (Sep, 2011, my blog) <a href="#fnref2" class="footnote-backref">↩</a></p>
+              </li>
+              <li id="fn3" class="footnote-item">
+                <p><a href="https://paulhammant.com/2013/03/20/singleton-escape-plan/" target="_blank" rel="external">A Singleton Escape Plan</a> (Mar, 2013, PDF on my blog) <a href="#fnref3" class="footnote-backref">↩</a></p>
+              </li>
+              <li id="fn4" class="footnote-item">
+                <p><a href="https://paulhammant.com/2016/07/25/java-legacy-hairball-refactoring-case-study/" target="_blank" rel="external">Java legacy hairball: refactoring case-study</a> (Jul, 2016, my blog) <a href="#fnref4" class="footnote-backref">↩</a></p>
+              </li>
+            </ol>
+          </section>
         </div>
         <div class="article__tags"><a href="/tags/Trunk-Based-Development/" class="article__tags__item">Trunk-Based Development</a><a href="/tags/Branch-by-Abstraction/" class="article__tags__item">Branch by Abstraction</a><a href="/tags/Legacy-Rejuvenation/" class="article__tags__item">Legacy Rejuvenation</a></div>
         <div
@@ -108,7 +105,7 @@
     </div>
     <!-- Disqus Code-->
     <!-- Meta Tags for Structured Data-->
-    <meta itemprop="dateModified" content="2017-06-04T10:29:10.000Z">
+    <meta itemprop="dateModified" content="2017-06-17T10:00:29.000Z">
     <meta itemprop="articleBody" content="In 2005 I assessed Bank of America’s FX platform in Chicago, and presented back to the leadership on their challenges and left them with recommendations. I went on to lead a development...">
     <meta itemprop="url" content="http://devops.paulhammant.com//BofA-Platform-Case-Study/">
     <meta itemprop="mainEntityOfPage" content="http://devops.paulhammant.com//BofA-Platform-Case-Study/">
@@ -148,10 +145,10 @@
         <div class="widgets__item">
           <h3 class="widgets__item__heading">Recent posts</h3>
           <ul class="recent-posts">
-            <li class="recent-posts__item"><a href="/HedgeServ-Innovations/">HedgeServ innovations</a></li>
-            <li class="recent-posts__item"><a href="/Build-Radiators-as-a-Service/">Build Radiators as a Service</a></li>
-            <li class="recent-posts__item"><a href="/BofA-Platform-Case-Study/">Bank of America FX Platform Case Study</a></li>
             <li class="recent-posts__item"><a href="/Airline-Case-Study/">Airline Case Study</a></li>
+            <li class="recent-posts__item"><a href="/BofA-Platform-Case-Study/">Bank of America FX Platform Case Study</a></li>
+            <li class="recent-posts__item"><a href="/Build-Radiators-as-a-Service/">Build Radiators as a Service</a></li>
+            <li class="recent-posts__item"><a href="/HedgeServ-Innovations/">HedgeServ innovations</a></li>
           </ul>
         </div>
         <div class="widgets__item">
