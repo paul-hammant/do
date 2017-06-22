@@ -18,7 +18,7 @@
   <meta property="og:site_name" content="Paul Hammant&#39;s DevOps">
   <meta property="og:description" content="As a ThoughtWorks consultant, I was sent to clients to assess the way they developed software and present the findings back to them. Sometimes I did this solo, and sometimes as a team. My focus was al">
   <meta property="og:image" content="http://paulhammant.com/images/basic_tbd.png">
-  <meta property="og:updated_time" content="2017-06-17T09:45:14.000Z">
+  <meta property="og:updated_time" content="2017-06-22T09:16:54.000Z">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="About me">
   <meta name="twitter:description" content="As a ThoughtWorks consultant, I was sent to clients to assess the way they developed software and present the findings back to them. Sometimes I did this solo, and sometimes as a team. My focus was al">
@@ -99,7 +99,7 @@
             That article effectively renamed IoC to DI. Note my name at the bottom of Martin’s article.</p>
           <p>Of course these days, we all like the practice of using constructors for passing dependencies into components (rather than shared static state), but not as much the containers. At least not as much as we did back then.</p>
           <h3 id="legacy-refactoring-least-depending-most-depended-on-first"><a class="header-anchor" href="#legacy-refactoring-least-depending-most-depended-on-first">¶</a>Legacy Refactoring: Least depending, most depended on first</h3>
-          <p>This approach to a large refactoring agenda came out of my Bak of America mission. I first documented it for InfoQ in 2008
+          <p>This approach to a large refactoring agenda came out of my Bank of America mission. I first documented it for InfoQ in 2008
             <sup class="footnote-ref"><a href="#fn7" id="fnref7">[7]</a></sup>. It was referenced in a follow-up “refactoring experiment” article<sup class="footnote-ref"><a href="#fn8" id="fnref8">[8]</a></sup>, and updated and made into a PDF in 2013
             <sup
               class="footnote-ref"><a href="#fn9" id="fnref9">[9]</a></sup>. Actual animations from the BofA recommendation deck were redone in JavaScript and SVG for a blog entry on “tweening” in 2016 for fun<sup class="footnote-ref"><a href="#fn10" id="fnref10">[10]</a></sup>.</p>
@@ -109,11 +109,15 @@
             <sup class="footnote-ref"><a href="#fn11" id="fnref11">[11]</a></sup> and Python<sup class="footnote-ref"><a href="#fn12" id="fnref12">[12]</a></sup> proofs of concept. Microsoft is also talking about the same ideas <sup class="footnote-ref"><a href="#fn13" id="fnref13">[13]</a></sup><sup>,</sup>
             <sup class="footnote-ref"><a href="#fn14" id="fnref14">[14]</a></sup>.</p>
           <h3 id="configuration-as-code"><a class="header-anchor" href="#configuration-as-code">¶</a>Configuration as Code</h3>
-          <p>TODO</p>
+          <p>This is a new aspect of application development that pertains to teams that are constrained on their release cadence, but want to make controlled changes to the production changes between releases. Perhaps they are a financial services company
+            and need audible signoffs for each release. The concept is that there is a category of configuration that can be represented in JSON (etc) and stored canonically in VCS. This would be a separate VCS to that of the application’s code, and be
+            subject to different controls. The novel aspect to the prototypes I’ve been sharing with clients since 2012, is the “roundtrip editing” capability. That is where the’re a simple editing form in a web page for the configurable item (that saves
+            to VCS), and the ability for power users to edit the JSON directly as they would any other source document under source-control. I have five or so<sup class="footnote-ref"><a href="#fn15" id="fnref15">[15]</a></sup> real demonstrations of
+            the technology that clients can pick from when choosing their approach to this.</p>
           <h3 id="client-side-mvc"><a class="header-anchor" href="#client-side-mvc">¶</a>Client Side MVC</h3>
-          <p>Because of a friendship with the authors of Angular, I was able to prepare and push a blog entry<sup class="footnote-ref"><a href="#fn15" id="fnref15">[15]</a></sup> on it the same day as Miško Hevery announced the tech for the first time on
+          <p>Because of a friendship with the authors of Angular, I was able to prepare and push a blog entry<sup class="footnote-ref"><a href="#fn16" id="fnref16">[16]</a></sup> on it the same day as Miško Hevery announced the tech for the first time on
             his blog
-            <sup class="footnote-ref"><a href="#fn16" id="fnref16">[16]</a></sup> in 2009. Ever since I have been a huge fan of its terse &amp; expressive style, and the stroke of genius that extending HTML was. I’ve written 29 blog entries on &quot;Client
+            <sup class="footnote-ref"><a href="#fn17" id="fnref17">[17]</a></sup> in 2009. Ever since I have been a huge fan of its terse &amp; expressive style, and the stroke of genius that extending HTML was. I’ve written 29 blog entries on &quot;Client
             Side MVC&quot; since then, all focused on the potential for development cost reductions that this class of technology heralds (if done right). As an application technology choice, there’s definitely a DevOps benefit.</p>
           <hr class="footnotes-sep">
           <section class="footnotes">
@@ -163,10 +167,13 @@
                 <p><a href="https://blogs.msdn.microsoft.com/visualstudioalm/2017/05/16/accelerated-continuous-testing-with-test-impact-analysis-part-2/" target="_blank" rel="external">Accelerated Continuous Testing with Test Impact Analysis – Part 2</a>                  (May, 2017, MSDN) <a href="#fnref14" class="footnote-backref">↩</a></p>
               </li>
               <li id="fn15" class="footnote-item">
-                <p><a href="https://paulhammant.com/blog/angular-declarative-ui.html" target="_blank" rel="external">Angular - HTML based Declarative UI (also one to watch)</a> (published Sep, 2009) <a href="#fnref15" class="footnote-backref">↩</a></p>
+                <p><a href="https://paulhammant.com/categories.html#Configuration_as_Code" target="_blank" rel="external">15 Configuration as Code blog entries</a> <a href="#fnref15" class="footnote-backref">↩</a></p>
               </li>
               <li id="fn16" class="footnote-item">
-                <p><a href="http://misko.hevery.com/2009/09/28/hello-world-angular-is-here/" target="_blank" rel="external">Hello World, &lt;angular/&gt; is here</a> (published Sep, 2009) <a href="#fnref16" class="footnote-backref">↩</a></p>
+                <p><a href="https://paulhammant.com/blog/angular-declarative-ui.html" target="_blank" rel="external">Angular - HTML based Declarative UI (also one to watch)</a> (published Sep, 2009) <a href="#fnref16" class="footnote-backref">↩</a></p>
+              </li>
+              <li id="fn17" class="footnote-item">
+                <p><a href="http://misko.hevery.com/2009/09/28/hello-world-angular-is-here/" target="_blank" rel="external">Hello World, &lt;angular/&gt; is here</a> (published Sep, 2009) <a href="#fnref17" class="footnote-backref">↩</a></p>
               </li>
             </ol>
           </section>
@@ -181,7 +188,7 @@
         </div>
         <!-- Disqus Code-->
         <!-- Meta Tags for Structured Data-->
-        <meta itemprop="dateModified" content="2017-06-17T09:45:14.000Z">
+        <meta itemprop="dateModified" content="2017-06-22T09:16:54.000Z">
         <meta itemprop="articleBody" content="As a ThoughtWorks consultant, I was sent to clients to assess the way they developed software and present the findings back to them. Sometimes I did this solo, and sometimes as a team. My focus...">
         <meta itemprop="url" content="http://devops.paulhammant.com//about.html">
         <meta itemprop="mainEntityOfPage" content="http://devops.paulhammant.com//about.html">
@@ -208,10 +215,10 @@
         <div class="widgets__item">
           <h3 class="widgets__item__heading">Recent posts</h3>
           <ul class="recent-posts">
+            <li class="recent-posts__item"><a href="/HedgeServ-Innovations/">HedgeServ innovations</a></li>
             <li class="recent-posts__item"><a href="/Airline-Case-Study/">Airline Case Study</a></li>
             <li class="recent-posts__item"><a href="/BofA-Platform-Case-Study/">Bank of America FX Platform Case Study</a></li>
             <li class="recent-posts__item"><a href="/Build-Radiators-as-a-Service/">Build Radiators as a Service</a></li>
-            <li class="recent-posts__item"><a href="/HedgeServ-Innovations/">HedgeServ innovations</a></li>
           </ul>
         </div>
         <div class="widgets__item">
