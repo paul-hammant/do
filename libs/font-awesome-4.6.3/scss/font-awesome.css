@@ -1,10 +1,8 @@
 @charset "UTF-8";
-
 /*!
  *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
-
 
 /* FONT PATH
  * -------------------------- */
@@ -25,7 +23,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 
 /* makes the font 33% larger relative to the icon container */
 
@@ -99,7 +96,6 @@
 .fa.fa-pull-right {
   margin-left: .3em;
 }
-
 
 /* Deprecated as of 4.4.0 */
 
@@ -222,7 +218,6 @@
 .fa-inverse {
   color: #fff;
 }
-
 
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
    readers do not read off random characters that represent icons */
